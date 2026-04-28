@@ -14,7 +14,7 @@
                 <li><a href="" class="hover:text-[#ff7b02] transition-colors">About</a></li>
                 <li><a href="" class="hover:text-[#ff7b02] transition-colors">Services</a></li>
                 <li><a href="" class="hover:text-[#ff7b02] transition-colors">Resources</a></li>
-                <li><a href="" class="hover:text-[#ff7b02] transition-colors">Contact</a></li>
+                <li><a href="contact.php" class="hover:text-[#ff7b02] transition-colors">Contact</a></li>
             </ul>
 
             <!-- SOCIAL LINKS -->
@@ -61,7 +61,7 @@
         </li>
         <li
             class="h-20 shadow-[-3rem_3rem_3rem_rgba(0,0,0,0.7)] bg-[#003347] hover:bg-[#003347]/80 animate-navAnimation [animation-delay:400ms]">
-            <a href="" class="flex items-center h-full px-6">Services</a>
+            <a href="" class="flex items-center h-full px-6">Service</a>
         </li>
         <li
             class="h-20 shadow-[-3rem_3rem_3rem_rgba(0,0,0,0.7)] bg-[#003347] hover:bg-[#003347]/80 animate-navAnimation [animation-delay:600ms]">
@@ -69,7 +69,7 @@
         </li>
         <li
             class="h-20 shadow-[-3rem_3rem_3rem_rgba(0,0,0,0.7)] bg-[#003347] hover:bg-[#003347]/80 animate-navAnimation [animation-delay:600ms]">
-            <a href="" class="flex items-center h-full px-6">Contact</a>
+            <a href="contact.php" class="flex items-center h-full px-6">Contact</a>
         </li>
     </ul>
     <!-- End Of Nav -->
