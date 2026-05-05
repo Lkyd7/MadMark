@@ -1,6 +1,6 @@
 <?php
 include 'partials/header.php';
-include 'config/dbconfig.php';
+include 'scripts/featured_games.php';
 ?>
 
 
@@ -143,6 +143,75 @@ include 'config/dbconfig.php';
 
 <section class="bg-gray-900 text-white py-16">
   <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        💬 What Gamers Say
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        Real feedback from players who upgraded their gaming experience with us.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-purple-500/20 transition">
+        <div class="flex items-center mb-4">
+          <img 
+            src="https://randomuser.me/api/portraits/men/32.jpg" 
+            alt="User" 
+            class="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <h4 class="font-semibold">James Carter</h4>
+            <p class="text-sm text-gray-400">FPS Enthusiast</p>
+          </div>
+        </div>
+        <p class="text-gray-300 text-sm">
+          “Super fast delivery and the game selection is insane. I found titles here I couldn’t get anywhere else!”
+        </p>
+        <div class="mt-4 text-purple-400">★★★★★</div>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-purple-500/20 transition">
+        <div class="flex items-center mb-4">
+          <img 
+            src="https://randomuser.me/api/portraits/women/44.jpg" 
+            alt="User" 
+            class="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <h4 class="font-semibold">Sophie Nguyen</h4>
+            <p class="text-sm text-gray-400">RPG Lover</p>
+          </div>
+        </div>
+        <p class="text-gray-300 text-sm">
+          “Absolutely love the deals! Picked up my favorite RPG at a huge discount. Will definitely shop again.”
+        </p>
+        <div class="mt-4 text-purple-400">★★★★★</div>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-purple-500/20 transition">
+        <div class="flex items-center mb-4">
+          <img 
+            src="https://randomuser.me/api/portraits/men/65.jpg" 
+            alt="User" 
+            class="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <h4 class="font-semibold">Liam O’Connor</h4>
+            <p class="text-sm text-gray-400">Casual Gamer</p>
+          </div>
+        </div>
+        <p class="text-gray-300 text-sm">
+          “Clean website, easy checkout, and awesome support. My go-to store for anything gaming.”
+        </p>
+        <div class="mt-4 text-purple-400">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-900 text-white py-16">
+  <div class="max-w-7xl mx-auto px-6">
     <div class="flex items-center justify-between mb-10">
       <h2 class="text-3xl md:text-4xl font-bold">
         🔥 Trending Now
@@ -175,7 +244,7 @@ include 'config/dbconfig.php';
 
       <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition transform">
         <img 
-          src="https://images.unsplash.com/photo-1523906630133-f6934a9f2010?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjc3OTZ8MHwxfHNlYXJjaHw0fHxnaW1lfGVufDB8fHx8MTY4MTQ1MDYxMA&ixlib=rb-4.0.3&q=80&w=1080" 
+          src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=1080&q=80" 
           alt="Cyber Rally" 
           class="w-full h-56 object-cover"
         />
@@ -215,6 +284,50 @@ include 'config/dbconfig.php';
     </div>
   </div>
 </section>
+
+
+<section class="py-16 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Games</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Explore some of the most exciting titles available right now. Each game offers a unique world, thrilling gameplay, and unforgettable experiences.
+      </p>
+    </div>
+
+
+
+
+
+    <!-- Cards Grid -->
+    <div class="grid gap-8 md:grid-cols-3">
+        <?php foreach ($featured_games as $game): ?>
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img 
+          src="assets/image/<?= htmlspecialchars($game['game_image'], ENT_QUOTES, 'UTF-8') ?>" 
+          alt="<?= htmlspecialchars($game['game_name'], ENT_QUOTES, 'UTF-8') ?>" 
+          class="w-full h-48 object-cover"
+        >
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3"><?= htmlspecialchars($game['game_name'], ENT_QUOTES, 'UTF-8') ?> </h3>
+          <p class="text-gray-600 mb-4">
+            Dive into a futuristic world filled with neon lights, fast action, and mystery.
+          </p>
+          <button class="px-5 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+            More Info
+          </button>
+        </div>
+      </div>
+<?php endforeach ?>
+     
+    </div>
+  </div>
+</section>
+
 
 <section class="bg-gray-900 text-white py-16">
   <div class="max-w-7xl mx-auto px-6">
@@ -288,6 +401,18 @@ include 'config/dbconfig.php';
         </p>
         <div class="mt-4 text-purple-400">★★★★★</div>
       </div>
+
+
+          <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Games</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Explore some of the most exciting titles available right now. Each game offers a unique world, thrilling gameplay, and unforgettable experiences.
+      </p>
+    </div>
+
+    
+
 
     </div>
   </div>

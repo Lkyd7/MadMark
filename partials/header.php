@@ -1,3 +1,6 @@
+<?php
+include 'config/dbConfig.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +34,7 @@
       <a href="contact.php" class="text-sm/6 font-semibold text-gray-900">Contact</a>
     </el-popover-group>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4">
-      <form action="#" method="get" class="flex items-center rounded-full border border-gray-200 bg-white px-3 py-2 shadow-sm focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-500/20">
+      <form action="search_result.php" method="get" class="flex items-center rounded-full border border-gray-200 bg-white px-3 py-2 shadow-sm focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-500/20">
         <label for="site-search" class="sr-only">Search</label>
         <input id="site-search" name="q" type="search" placeholder="Search" class="w-40 bg-transparent text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none" />
         <button type="submit" class="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-600 text-white hover:bg-purple-500">
