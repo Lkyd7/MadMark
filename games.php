@@ -44,7 +44,8 @@
                     </div>
                 </div>
 
-                <button class="mt-4 bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+                <button class="mt-4 bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300"
+                onclick="window.location.href='game_details.php?game_id=<?= $game['id'] ?>'">
                     More Details
                 </button>
 
