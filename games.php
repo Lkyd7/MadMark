@@ -2,6 +2,7 @@
     include 'partials/header.php';
     include 'scripts/all_games.php';
 ?>
+
 <div class="max-w-7xl mx-auto">
     <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">Games</h1>  
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -12,7 +13,7 @@
             <div class="relative overflow-hidden h-80">
                 <!-- display game image safely -->
                 <img src="assets/image/<?= htmlspecialchars($game['game_image'], ENT_QUOTES, 'UTF-8') ?>" 
-                        alt="Image of <?= htmlspecialchars($game['game_name'], ENT_QUOTES, 'UTF-8') ?>" <!-- use game name for accessibility -->
+                        alt="Image of <?= htmlspecialchars($game['game_name'], ENT_QUOTES, 'UTF-8') ?>"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
