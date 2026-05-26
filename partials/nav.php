@@ -5,7 +5,7 @@
         <div class="container mx-auto flex justify-between items-center h-full px-6">
             <!-- LOGO -->
             <a href="/" class="w-12">
-                <img src="https://tailwindflex.com/images/logo.svg" alt="nav logo" class="object-cover object-center">
+                <img src="mad_mike_logo.png" alt="nav logo" class="object-cover object-center">
             </a>
 
             <!-- NAV LINKS -->

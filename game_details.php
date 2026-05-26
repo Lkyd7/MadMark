@@ -61,7 +61,7 @@ include 'scripts/featured_games.php';
             <?= htmlspecialchars($game['game_name']) ?>
         </h1>
         <p class="text-center md:text-left text-sm text-slate-700 max-w-lg mt-2">
-            <?= htmlspecialchars($game['game_name']) ?>
+            <?= htmlspecialchars($game['game_description']) ?>
         </p>
         <p class="text-center md:text-left text-sm text-slate-700 max-w-lg mt-2">
             <?= htmlspecialchars($game['game_price']) ?>
@@ -70,5 +70,47 @@ include 'scripts/featured_games.php';
            
         </div>
     </div>
-    <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/hero-section-showcase-4.png" alt="hero" class="max-w-xs sm:max-w-sm lg:max-w-md transition-all duration-300">
+    <img src="assets/image/<?= htmlspecialchars($game['game_image']) ?>" alt="hero" class="max-w-xs sm:max-w-sm lg:max-w-md transition-all duration-300">
 </section>
+
+<section class="py-16 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Games</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Explore some of the most exciting titles available right now. Each game offers a unique world, thrilling gameplay, and unforgettable experiences.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid gap-8 md:grid-cols-3">
+        <?php foreach ($featured_games as $game): ?>
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img 
+          src="assets/image/<?= htmlspecialchars($game['game_image'], ENT_QUOTES, 'UTF-8') ?>" 
+          alt="<?= htmlspecialchars($game['game_name'], ENT_QUOTES, 'UTF-8') ?>" 
+          class="w-full h-48 object-cover"
+        >
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3"><?= htmlspecialchars($game['game_name'], ENT_QUOTES, 'UTF-8') ?> </h3>
+          <p class="text-gray-600 mb-4">
+            Dive into a futuristic world filled with neon lights, fast action, and mystery.
+          </p>
+          <button class="px-5 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+            More Info
+          </button>
+        </div>
+      </div>
+<?php endforeach ?>
+     
+    </div>
+  </div>
+</section>
+
+<?php
+include "partials/footer.php";
+?>
